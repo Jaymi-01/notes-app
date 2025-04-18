@@ -13,14 +13,14 @@ const databaseService = {
   },
 
   // Create Docs
-  async createDocument(dbId, colId, data, id = null){
+  async createDocument(dbId, colId, data, id = null) {
     try {
-      return await database.createDocument(dbId, colId, id || undefined, data)
+      return await database.createDocument(dbId, colId, id || undefined, data);
     } catch (error) {
-      console.error('Error Creating Document', error.message);
-      return{
+      console.error("Error Creating Document", error.message);
+      return {
         error: error.message,
-      }
+      };
     }
   },
 };

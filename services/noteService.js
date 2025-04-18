@@ -15,7 +15,7 @@ const noteService = {
     return { data: response };
   },
   //Add New Note
-  async addNote() {
+  async addNote(text) {
     if (!text) {
       return { error: "Note text cannot be empty, baka!" };
     }
